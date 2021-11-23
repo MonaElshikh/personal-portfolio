@@ -1,0 +1,251 @@
+/****************************************************** Start Global ******************************************************/
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:root {
+  --main-padding: 25px;
+  --main-margin: 50px;
+  --main-red-bg: #be3144;
+  --main-blue-bg: #45567d;
+  --main-dark-bg: #333;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+main {
+  position: relative;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+main {
+  position: relative;
+}
+
+/****************************************************** End Global ******************************************************/
+/***************************************************** Start Header *****************************************************/
+header {
+  position: fixed;
+  top: 0;
+  background-color: var(--main-red-bg);
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  min-height: 60px;
+  padding: 10px;
+  z-index: 2;
+}
+header > nav > ul {
+  display: flex;
+}
+header > nav > ul > li {
+  padding: 10px 15px;
+}
+header > nav > ul > li > a {
+  color: white;
+  font-size: 24px;
+}
+/***************************************************** End Header *****************************************************/
+/***************************************************** Start Welcome **************************************************/
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-dark-bg);
+  height: 100vh;
+  width: 100%;
+}
+.welcome-section > h1 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin: 10px 0;
+}
+.welcome-section > p {
+  color: var(--main-red-bg) !important;
+  font-size: 1.5rem;
+  font-style: italic;
+}
+/***************************************************** End Welcome *****************************************************/
+/***************************************************** Start Work  ****************************************************/
+.work {
+  padding: calc(var(--main-margin) + 50px) var(--main-padding);
+  background-color: var(--main-blue-bg);
+}
+.work > h2 {
+  margin: 0 auto 50px;
+  font-size: 45px;
+  border-bottom: solid 2px white;
+  width: fit-content;
+  text-align: center;
+}
+.work .projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.work .projects .project-tile {
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.work .projects .project-tile > img {
+  width: 100%;
+  height: 300px;
+  max-height: 100%;
+}
+.work .projects .project-tile .caption {
+  background-color: #333;
+  padding: 20px;
+  text-align: center;
+}
+.work .projects .project-tile .caption > a {
+  color: white;
+  font-size: 20px;
+  position: relative;
+  display: block;
+}
+.work .projects .project-tile .caption > a::before,
+.work .projects .project-tile .caption > a::after {
+  top: 0;
+  color: var(--main-red-bg);
+  font-weight: bold;
+  opacity: 0;
+  transition: 0.3s;
+}
+.work .projects .project-tile .caption > a::before {
+  content: "< ";
+}
+.work .projects .project-tile .caption > a::after {
+  content: " />";
+}
+.work .projects .project-tile:hover .caption > a::before,
+.work .projects .project-tile:hover .caption > a::after {
+  opacity: 1;
+}
+.work > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto 0;
+  padding: 10px 25px;
+  color: white;
+  background-color: var(--main-dark-bg);
+  width: fit-content;
+  font-weight: 400;
+  font-size: 18px;
+  transition: 0.4s;
+}
+.work > a > svg {
+  fill: white;
+  width: 25px;
+  height: 25px;
+  padding: 0 5px;
+  transition: 0.4s;
+}
+.work > a:hover {
+  background-color: var(--main-red-bg);
+}
+
+.work > a:hover > svg {
+  transform: translateX(5px);
+}
+/***************************************************** End Work *****************************************************/
+/*****************************************************  Start Contact **********************************************/
+.contact {
+  background-color: var(--main-dark-bg);
+  padding: var(--main-padding);
+  text-align: center;
+  border-bottom: solid 5px var(--main-red-bg);
+}
+.contact > h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.contact > h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  font-style: italic;
+  margin-top: 6px;
+  margin-bottom: 60px;
+  letter-spacing: 1.5px;
+}
+.contact > ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+.contact > ul > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.4s;
+}
+.contact > ul > li:hover {
+  transform: translateY(7px);
+}
+.contact > ul > li > svg {
+  fill: white;
+  width: 25px;
+  height: 25px;
+}
+.contact > ul > li > a {
+  color: white;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+}
+/*****************************************************  End Contact **********************************************/
+/**************************************************** Start Footer ****************************************************/
+footer {
+  background-color: var(--main-dark-bg);
+  padding: var(--main-padding) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer > span {
+  display: block;
+  text-align: center;
+}
+footer > a {
+  color: white;
+  margin: 10px 0 0;
+}
+
+/**************************************************** End Footer ****************************************************/
+
+/***************************************************** Start Media *****************************************************/
+@media (min-width: 768px) {
+  header {
+    justify-content: flex-end;
+  }
+  .welcome-section > h1 {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .welcome-section > p {
+    color: var(--header-bg-color);
+    font-size: 2rem;
+  }
+  footer {
+    justify-content: space-around;
+  }
+}
+/***************************************************** End Media *****************************************************/
